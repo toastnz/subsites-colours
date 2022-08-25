@@ -5,6 +5,8 @@ Name: subsites-theme
 SilverStripe\Subsites\Model\Subsite:
   extensions:
     - Toast\SubsitesTheme\Extensions\SubsiteExtension
+
+Toast\Models\SubsiteThemeColour:
   default_colours:
       - Primary
       - Secondary

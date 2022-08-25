@@ -49,17 +49,8 @@ class SubsiteExtension extends DataExtension
   
     public function onBeforeWrite()
     {
-        // TODO: is it possible to not allow the user to save the colour if it is named: 
-        // $restricted = [
-        //     'primary',
-        //     'secondary',
-        //     'tertiary',
-        // ];
-
-        // TODO: is it also possible to prevent a user from adding the same colour twice?
-
-        parent::onBeforeWrite();
         $this->generateDefaultColours();
+        parent::onBeforeWrite();
     }
 
     public function generateDefaultColours()
@@ -72,15 +63,15 @@ class SubsiteExtension extends DataExtension
                 ->first();
 
             $restricted = [
-                'primary',
-                'secondary',
-                'tertiary',
+                'Primary',
+                'Secondary',
+                'Tertiary',
             ];
 
             if (!$existingRecord) {
                 // If the lowercase title is not in the restricted array, then create a new record.
                 if (!in_array(strtolower($name), $restricted)) {
-                    $colour = new ThemeColour();
+                    $colour = new SubsiteThemeColour();
                     $colour->Title = $name;
                     $colour->write();
                     $this->owner->ThemeColours()->add($colour->ID);
@@ -91,6 +82,6 @@ class SubsiteExtension extends DataExtension
 
     protected function getDefaultColourNames()
     {
-        return ThemeColour::config()->get('default_colours') ?: [];
+        return SubsiteThemeColour::config()->get('default_colours') ?: [];
     }
 }

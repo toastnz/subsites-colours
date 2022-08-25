@@ -12,22 +12,23 @@ use Toast\SubsitesTheme\Helpers\Helper;
 use SilverStripe\ORM\DataExtension;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Core\Extension;
+use SilverStripe\View\Requirements;
+use Heyday\ColorPalette\Fields\ColorPaletteField;
 
 class PageExtension extends DataExtension
 {
     public function updateCMSFields(FieldList $fields)
     {
-         
-       
     }
 }
 
 class PageControllerExtension extends Extension
 {
 
-    protected function init()
+    public function onAfterInit()
     {
-        parent::init();
+
+        $themeCssFilePath = Director::baseFolder() . '/app/client/styles/mainsite-frontend.css';
        
         // require current active site css if subsite exists
         if (class_exists(Subsite::class)){
@@ -38,13 +39,12 @@ class PageControllerExtension extends Extension
             
             }
         }
-       
    
         if (!file_exists($themeCssFilePath)){
             $result = Helper::generateCSSFiles($themeCssFilePath);
         }
-
         if (file_exists($themeCssFilePath)){
+            
             Requirements::customCSS(file_get_contents($themeCssFilePath));
         }
         

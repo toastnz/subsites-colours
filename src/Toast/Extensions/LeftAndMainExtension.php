@@ -26,17 +26,25 @@ class LeftAndMainExtension extends \SilverStripe\Admin\LeftAndMainExtension
         // Set TinyMCE with generated subsitescss file
         $config = TinyMCEConfig::get('cms');
         $colours = null;
+
         if(Helper::isSubsite()){
             $subsite = Subsite::currentSubsite();
             $editorCSSFileName = 'subsite' . $subsite->ID . '-editor.css';
             $subsiteCSSFileName = 'subsite' . $subsite->ID . '-frontend.css';
-            $themeCssFilePath = '/app/client/styles/'.$subsiteCSSFileName;
+            $colours = $subsite->ThemeColours();
+            
+        }else{
+            $editorCSSFileName = 'mainsite-editor.css';
+            $subsiteCSSFileName = 'mainsite-frontend.css';
+        }
+
+
+        $themeCssFilePath = '/app/client/styles/'.$subsiteCSSFileName;
             $editorCssFilePath = '/app/client/styles/'.$editorCSSFileName;
             if (!file_exists(Director::baseFolder() .$themeCssFilePath)){
                 $result = Helper::generateCSSFiles($themeCssFilePath);
             }
             if (file_exists(Director::baseFolder() .$themeCssFilePath) && file_exists(Director::baseFolder() .$editorCssFilePath)) {
-                $colours = $subsite->ThemeColours();
                 $config->setContentCSS([
                     // $themeCssFilePath,
                     $editorCssFilePath
@@ -54,8 +62,6 @@ class LeftAndMainExtension extends \SilverStripe\Admin\LeftAndMainExtension
                 'importcss_append' => true,
                 'style_formats' => $formats,
             ]);
-            
-        }
     }
 
     public function getFormatsForTinyMCE($colours = null)

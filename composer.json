@@ -28,7 +28,6 @@
         "silverstripe/subsites": "^2.6",
         "silverstripe/admin": "^1.0",
         "adrexia/subsite-modeladmins": "^2.2",
-        "toastnz/blocks": "^2",
         "heyday/silverstripe-colorpalette": "^2.0"
     },
     "require-dev": {

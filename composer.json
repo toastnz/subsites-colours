@@ -1,25 +1,38 @@
 {
-    "name": "silverstripe-module/skeleton",
-    "description": "A skeleton for SilverStripe modules.",
+    "name": "toastnz/subsites-theme",
+    "description": "Silverstripe subsites and it's theme colours module.",
     "type": "silverstripe-vendormodule",
     "keywords": [
         "silverstripe",
+        "subsites",
+        "theme",
+        "colours",
         "CMS"
-    ],
+    ], 
+    "authors": [
+        {
+          "name": "Priscilla Yap",
+          "homepage": "http://toast.co.nz/",
+          "role": "Developer"
+        },
+        {
+          "name": "Emmanuel Davies",
+          "homepage": "http://toast.co.nz/",
+          "role": "Developer"
+        }
+      ],
     "license": "BSD-3-Clause",
     "require": {
         "silverstripe/framework": "^4.0",
-        "silverstripe/admin": "^1.0"
+        "silverstripe/subsites": "^2.6",
+        "silverstripe/admin": "^1.0",
+        "adrexia/subsite-modeladmins": "^2.2",
+        "toastnz/blocks": "^2",
+        "heyday/silverstripe-colorpalette": "^2.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7",
         "squizlabs/php_codesniffer": "^3.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "SilverStripeModule\\Skeleton\\": "src/",
-            "SilverStripeModule\\Skeleton\\Tests\\": "tests/"
-        }
     },
     "extra": {
         "branch-alias": {
@@ -30,5 +43,11 @@
         ]
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "silverstripe/vendor-plugin": true
+        }
+    }
 }

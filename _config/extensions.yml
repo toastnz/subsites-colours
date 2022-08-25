@@ -1,0 +1,15 @@
+---
+Name: subsites-extensions
+---
+
+SilverStripe\Admin\LeftAndMain:
+  extensions:
+    - Toast\SubsitesTheme\Extensions\LeftAndMainExtension
+
+Page:
+  extensions:
+    - Toast\SubsitesTheme\Extensions\PageExtension
+
+Toast\Blocks\Block:
+  extensions:
+    - Toast\SubsitesTheme\Extensions\BlockExtension

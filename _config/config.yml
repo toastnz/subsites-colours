@@ -1,0 +1,11 @@
+---
+Name: subsites-theme
+---
+
+SilverStripe\Subsites\Model\Subsite:
+  extensions:
+    - Toast\SubsitesTheme\Extensions\SubsiteExtension
+  default_colours:
+      - Primary
+      - Secondary
+      - Tertiary

@@ -10,7 +10,7 @@ use SilverStripe\SiteConfig\SiteConfig;
 use SilverStripe\Subsites\Model\Subsite;
 use SilverStripe\Subsites\State\SubsiteState;
 use SilverStripe\ORM\DataObject;
-use Toast\Models\ThemeColour;
+use Toast\Models\SubsiteThemeColour;
 use SilverStripe\ORM\DB;
 use Toast\Helpers\Helper;
 use SilverStripe\Core\Config\Config;
@@ -148,7 +148,7 @@ class GenerateSubsitesThemeColourTask extends BuildTask
 
     protected function getDefaultColourNames()
     {
-        $config = Config::inst()->get(Subsite::class, 'default_colours');
+        $config = Config::inst()->get(SubsiteThemeColour::class, 'default_colours');
         return $config ?: [];
     }
 

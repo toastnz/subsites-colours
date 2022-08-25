@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7db636864ec0985ad0b7fff43da40caf",
+    "content-hash": "3063247b637a1ba7ca8915b05fcd6ce9",
     "packages": [
         {
             "name": "adrexia/subsite-modeladmins",
@@ -43,6 +43,63 @@
                 "source": "https://github.com/adrexia/silverstripe-subsite-modeladmins/tree/master"
             },
             "time": "2019-03-06T04:33:33+00:00"
+        },
+        {
+            "name": "axllent/silverstripe-form-fields",
+            "version": "1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/axllent/silverstripe-form-fields.git",
+                "reference": "609049942a797f7d64c480461df4688683d7e5b5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/axllent/silverstripe-form-fields/zipball/609049942a797f7d64c480461df4688683d7e5b5",
+                "reference": "609049942a797f7d64c480461df4688683d7e5b5",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "^4.0",
+                "silverstripe/vendor-plugin": "^1.0"
+            },
+            "suggest": {
+                "guzzlehttp/guzzle": "optional: if you require VideoLink titles or Vimeo thumbnail images"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "expose": [
+                    "css",
+                    "javascript"
+                ]
+            },
+            "autoload": {
+                "psr-4": {
+                    "Axllent\\FormFields\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ralph Slooten",
+                    "homepage": "http://www.axllent.org/"
+                }
+            ],
+            "description": "Custom forms & fields for the Silverstripe framework & CMS",
+            "homepage": "https://github.com/axllent/silverstripe-form-fields",
+            "keywords": [
+                "Forms",
+                "cms",
+                "framework",
+                "silverstripe"
+            ],
+            "support": {
+                "issues": "https://github.com/axllent/silverstripe-form-fields/issues",
+                "source": "https://github.com/axllent/silverstripe-form-fields/tree/1.6.0"
+            },
+            "time": "2022-05-27T10:00:31+00:00"
         },
         {
             "name": "bramus/ansi-php",
@@ -997,6 +1054,57 @@
                 }
             ],
             "time": "2022-06-20T21:43:11+00:00"
+        },
+        {
+            "name": "heyday/silverstripe-colorpalette",
+            "version": "2.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/heyday/silverstripe-colorpalette.git",
+                "reference": "52640f7dfcee5b5ff53723c6f6b072eed27ab2fb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/heyday/silverstripe-colorpalette/zipball/52640f7dfcee5b5ff53723c6f6b072eed27ab2fb",
+                "reference": "52640f7dfcee5b5ff53723c6f6b072eed27ab2fb",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "*",
+                "silverstripe/framework": "^4.0",
+                "silverstripe/vendor-plugin": "^1"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "expose": [
+                    "css"
+                ]
+            },
+            "autoload": {
+                "psr-4": {
+                    "Heyday\\ColorPalette\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cam Spiers",
+                    "email": "camspiers@gmail.com"
+                },
+                {
+                    "name": "Kyle Beattie",
+                    "email": "kyle@heyday.co.nz"
+                }
+            ],
+            "description": "A color palette picker for SilverStripe CMS",
+            "support": {
+                "issues": "https://github.com/heyday/silverstripe-colorpalette/issues",
+                "source": "https://github.com/heyday/silverstripe-colorpalette/tree/2.0.4"
+            },
+            "time": "2021-03-09T20:51:18+00:00"
         },
         {
             "name": "intervention/image",
@@ -2855,6 +2963,63 @@
             "time": "2022-06-23T07:11:13+00:00"
         },
         {
+            "name": "silverstripe/mimevalidator",
+            "version": "2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe/silverstripe-mimevalidator.git",
+                "reference": "9c7e46aa019a2188275f1d3937e1581f837ee6d1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-mimevalidator/zipball/9c7e46aa019a2188275f1d3937e1581f837ee6d1",
+                "reference": "9c7e46aa019a2188275f1d3937e1581f837ee6d1",
+                "shasum": ""
+            },
+            "require": {
+                "ext-fileinfo": "*",
+                "php": "^7.4 || ^8",
+                "silverstripe/framework": "^4.10"
+            },
+            "require-dev": {
+                "monolog/monolog": "~1.16",
+                "nikic/php-parser": "^3 || ^4",
+                "phpunit/phpunit": "^9.5",
+                "squizlabs/php_codesniffer": "^3.0"
+            },
+            "type": "silverstripe-vendormodule",
+            "autoload": {
+                "psr-4": {
+                    "SilverStripe\\MimeValidator\\": "src/",
+                    "SilverStripe\\MimeValidator\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sean Harvey",
+                    "email": "sean@silverstripe.com"
+                }
+            ],
+            "description": "Checks uploaded file content roughly matches a known MIME type for the file extension.",
+            "keywords": [
+                "cwp",
+                "fileinfo",
+                "mime",
+                "silverstripe",
+                "upload",
+                "validator"
+            ],
+            "support": {
+                "issues": "https://github.com/silverstripe/silverstripe-mimevalidator/issues",
+                "source": "https://github.com/silverstripe/silverstripe-mimevalidator/tree/2.4.0"
+            },
+            "time": "2022-05-04T01:29:40+00:00"
+        },
+        {
             "name": "silverstripe/reports",
             "version": "4.11.0",
             "source": {
@@ -2919,6 +3084,63 @@
                 "source": "https://github.com/silverstripe/silverstripe-reports/tree/4.11.0"
             },
             "time": "2022-04-22T04:18:26+00:00"
+        },
+        {
+            "name": "silverstripe/segment-field",
+            "version": "2.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe/silverstripe-segment-field.git",
+                "reference": "81e90a7259db41914c0c5c8f4498efb18307c543"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-segment-field/zipball/81e90a7259db41914c0c5c8f4498efb18307c543",
+                "reference": "81e90a7259db41914c0c5c8f4498efb18307c543",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4 || ^8.0",
+                "silverstripe/cms": "^4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5",
+                "silverstripe/reports": "^4",
+                "silverstripe/siteconfig": "^4",
+                "squizlabs/php_codesniffer": "^3"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "expose": [
+                    "client/dist"
+                ]
+            },
+            "autoload": {
+                "psr-4": {
+                    "SilverStripe\\Forms\\": "code/",
+                    "SilverStripe\\Forms\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christopher Pitt",
+                    "email": "cgpitt@gmail.com"
+                }
+            ],
+            "description": "A reusable approach to segment-generating fields",
+            "keywords": [
+                "segment",
+                "silverstripe"
+            ],
+            "support": {
+                "issues": "https://github.com/silverstripe/silverstripe-segment-field/issues",
+                "source": "https://github.com/silverstripe/silverstripe-segment-field/tree/2.6.0"
+            },
+            "time": "2022-05-03T09:27:26+00:00"
         },
         {
             "name": "silverstripe/siteconfig",
@@ -3036,6 +3258,90 @@
                 "source": "https://github.com/silverstripe/silverstripe-subsites/tree/2.6.0"
             },
             "time": "2022-04-26T05:57:39+00:00"
+        },
+        {
+            "name": "silverstripe/userforms",
+            "version": "5.13.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe/silverstripe-userforms.git",
+                "reference": "5e226f00dd594c71fc86f9f02b00a27597063373"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-userforms/zipball/5e226f00dd594c71fc86f9f02b00a27597063373",
+                "reference": "5e226f00dd594c71fc86f9f02b00a27597063373",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4 || ^8.0",
+                "silverstripe/cms": "^4.6",
+                "silverstripe/framework": "^4.10",
+                "silverstripe/mimevalidator": "^2.0",
+                "silverstripe/segment-field": "^2.2",
+                "silverstripe/versioned": "^1.0",
+                "symbiote/silverstripe-gridfieldextensions": "^3.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5",
+                "squizlabs/php_codesniffer": "^3.0"
+            },
+            "suggest": {
+                "colymba/gridfield-bulk-editing-tools": "Allows for bulk management of form submissions",
+                "silverstripe/gridfieldqueuedexport": "Export large submission as CSV through queued jobs in the background",
+                "silverstripe/spamprotection": "Adds support for spam protection to your user forms"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "expose": [
+                    "client/dist",
+                    "client/lang",
+                    "images"
+                ]
+            },
+            "autoload": {
+                "psr-4": {
+                    "SilverStripe\\UserForms\\": "code/",
+                    "SilverStripe\\UserForms\\Tests\\": "tests/php/",
+                    "SilverStripe\\UserForms\\Tests\\Behat\\Context\\": "tests/behat/src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Will Rossiter",
+                    "email": "will@fullscreen.io"
+                },
+                {
+                    "name": "Damian Mooyman",
+                    "email": "damian@silverstripe.com"
+                },
+                {
+                    "name": "David Craig",
+                    "email": "david@silverstripe.com"
+                },
+                {
+                    "name": "Scott Hutchinson",
+                    "email": "scott@silverstripe.com"
+                },
+                {
+                    "name": "Christopher Pitt",
+                    "email": "chris@silverstripe.com"
+                }
+            ],
+            "description": "UserForms enables CMS users to create dynamic forms via a drag and drop interface and without getting involved in any PHP code",
+            "keywords": [
+                "silverstripe",
+                "userforms"
+            ],
+            "support": {
+                "issues": "https://github.com/silverstripe/silverstripe-userforms/issues",
+                "source": "https://github.com/silverstripe/silverstripe-userforms/tree/5.13.1"
+            },
+            "time": "2022-06-01T22:43:42+00:00"
         },
         {
             "name": "silverstripe/vendor-plugin",
@@ -3272,6 +3578,80 @@
             ],
             "abandoned": "symfony/mailer",
             "time": "2021-10-18T15:26:12+00:00"
+        },
+        {
+            "name": "symbiote/silverstripe-gridfieldextensions",
+            "version": "3.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symbiote/silverstripe-gridfieldextensions.git",
+                "reference": "f56bf67e40df84622ab587882fe54cf9cd0ab611"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symbiote/silverstripe-gridfieldextensions/zipball/f56bf67e40df84622ab587882fe54cf9cd0ab611",
+                "reference": "f56bf67e40df84622ab587882fe54cf9cd0ab611",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4 || ^8.0",
+                "silverstripe/framework": "^4.11",
+                "silverstripe/vendor-plugin": "^1.0"
+            },
+            "replace": {
+                "ajshort/silverstripe-gridfieldextensions": "self.version",
+                "silverstripe-australia/gridfieldextensions": "self.version"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5",
+                "silverstripe/versioned": "^1",
+                "squizlabs/php_codesniffer": "^3.0"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "screenshots": [
+                    "docs/en/_images/editable-rows.png",
+                    "docs/en/_images/add-existing-search.png"
+                ],
+                "expose": [
+                    "css",
+                    "javascript"
+                ]
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symbiote\\GridFieldExtensions\\": "src/",
+                    "Symbiote\\GridFieldExtensions\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Andrew Short",
+                    "email": "andrewjshort@gmail.com"
+                },
+                {
+                    "name": "Marcus Nyeholt",
+                    "email": "marcus@symbiote.com.au"
+                }
+            ],
+            "description": "A collection of useful grid field components",
+            "homepage": "http://github.com/symbiote/silverstripe-gridfieldextensions",
+            "keywords": [
+                "gridfield",
+                "silverstripe",
+                "sort",
+                "sort field",
+                "sortable"
+            ],
+            "support": {
+                "issues": "http://github.com/symbiote/silverstripe-gridfieldextensions/issues",
+                "source": "https://github.com/symbiote/silverstripe-gridfieldextensions/tree/3.4.2"
+            },
+            "time": "2022-08-01T01:22:09+00:00"
         },
         {
             "name": "symfony/cache",
@@ -5013,6 +5393,266 @@
             "time": "2022-06-27T13:16:42+00:00"
         },
         {
+            "name": "toastnz/blocks",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/toastnz/blocks.git",
+                "reference": "dbd5bbb431c26be5d0269438a483e65586b23c2a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/toastnz/blocks/zipball/dbd5bbb431c26be5d0269438a483e65586b23c2a",
+                "reference": "dbd5bbb431c26be5d0269438a483e65586b23c2a",
+                "shasum": ""
+            },
+            "require": {
+                "axllent/silverstripe-form-fields": "^1.5",
+                "composer/installers": "*",
+                "silverstripe/cms": "^4.3",
+                "silverstripe/framework": "^4.3",
+                "silverstripe/userforms": "^5.5",
+                "symbiote/silverstripe-gridfieldextensions": "^3.1",
+                "toastnz/linkable": "^2",
+                "undefinedoffset/sortablegridfield": "^2.0.4"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "expose": [
+                    "images"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Jaydn de Graaf",
+                    "homepage": "http://pinc.nz/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Danae Miller-Clendon",
+                    "homepage": "http://toast.co.nz/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Emmanuel Davies",
+                    "homepage": "http://toast.co.nz/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Silverstripe content blocks module",
+            "keywords": [
+                "Content Blocks",
+                "modular",
+                "silverstripe"
+            ],
+            "support": {
+                "issues": "https://github.com/toastnz/blocks/issues",
+                "source": "https://github.com/toastnz/blocks/tree/2.0.0"
+            },
+            "time": "2022-07-13T10:10:16+00:00"
+        },
+        {
+            "name": "toastnz/linkable",
+            "version": "2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/toastnz/linkable.git",
+                "reference": "e5d565d2fb745893ff6b56360697f4cc2e481778"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/toastnz/linkable/zipball/e5d565d2fb745893ff6b56360697f4cc2e481778",
+                "reference": "e5d565d2fb745893ff6b56360697f4cc2e481778",
+                "shasum": ""
+            },
+            "require": {
+                "embed/embed": "^4",
+                "silverstripe/framework": "^4.0",
+                "silverstripe/vendor-plugin": "^1.0",
+                "unclecheese/display-logic": "*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7"
+            },
+            "suggest": {
+                "silverstripe/cms": "To allow for a linking of the SiteTree data object."
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "installer-name": "linkable",
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                },
+                "expose": [
+                    "client"
+                ]
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sheadawson\\Linkable\\": "src/",
+                    "Sheadawson\\Linkable\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Shea Dawson",
+                    "email": "shea@silverstripe.com.au"
+                },
+                {
+                    "name": "Marcus Nyeholt",
+                    "email": "marcus@silverstripe.com.au"
+                }
+            ],
+            "description": "A couple of handy form fields and objects for managing external and internal links on DataObjects",
+            "homepage": "http://github.com/sheadawson/silverstripe-linkable",
+            "keywords": [
+                "cms",
+                "link",
+                "silverstripe"
+            ],
+            "support": {
+                "issues": "http://github.com/sheadawson/silverstripe-linkable/issues",
+                "source": "https://github.com/toastnz/linkable/tree/2.0.3"
+            },
+            "time": "2022-08-19T22:44:03+00:00"
+        },
+        {
+            "name": "unclecheese/display-logic",
+            "version": "2.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/unclecheese/silverstripe-display-logic.git",
+                "reference": "c5566d782db2152cb2c9b11325c11eb14f3a645d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/unclecheese/silverstripe-display-logic/zipball/c5566d782db2152cb2c9b11325c11eb14f3a645d",
+                "reference": "c5566d782db2152cb2c9b11325c11eb14f3a645d",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "^4.0"
+            },
+            "replace": {
+                "silverstripe/display-logic": "*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7",
+                "se/selenium-server-standalone": "2.41.0",
+                "silverstripe/behat-extension": "^3@dev",
+                "silverstripe/serve": "^2"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "installer-name": "display-logic",
+                "expose": [
+                    "client"
+                ]
+            },
+            "autoload": {
+                "psr-4": {
+                    "UncleCheese\\DisplayLogic\\": "src/",
+                    "UncleCheese\\DisplayLogic\\Tests\\": "tests/php/",
+                    "UncleCheese\\DisplayLogic\\Tests\\Behaviour\\": "tests/behat/src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Uncle Cheese",
+                    "email": "unclecheese@leftandmain.com"
+                }
+            ],
+            "description": "Allows assignment of conditions for display and hide of specific form fields based on client side behavior.",
+            "keywords": [
+                "Forms",
+                "cms",
+                "display",
+                "logic",
+                "silverstripe"
+            ],
+            "support": {
+                "issues": "https://github.com/unclecheese/silverstripe-display-logic/issues",
+                "source": "https://github.com/unclecheese/silverstripe-display-logic/tree/2.0.4"
+            },
+            "time": "2022-07-06T00:06:21+00:00"
+        },
+        {
+            "name": "undefinedoffset/sortablegridfield",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/UndefinedOffset/SortableGridField.git",
+                "reference": "c3915cc2b8599e6ffc5da6286a72a8858f359e43"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/UndefinedOffset/SortableGridField/zipball/c3915cc2b8599e6ffc5da6286a72a8858f359e43",
+                "reference": "c3915cc2b8599e6ffc5da6286a72a8858f359e43",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "~4.11",
+                "silverstripe/vendor-plugin": "^1.0",
+                "silverstripe/versioned": "^1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5",
+                "squizlabs/php_codesniffer": "~3.4"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "installer-name": "sortablegridfield",
+                "expose": [
+                    "css",
+                    "javascript"
+                ],
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "UndefinedOffset\\SortableGridField\\": "src/",
+                    "UndefinedOffset\\SortableGridField\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ed Chipman",
+                    "homepage": "http://www.edchipman.ca",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Adds drag and drop functionality to SilverStripe 4.x's GridField",
+            "keywords": [
+                "gridfield",
+                "silverstripe",
+                "sort",
+                "sortable"
+            ],
+            "support": {
+                "issues": "https://github.com/undefinedoffset/SortableGridField/issues",
+                "source": "https://github.com/UndefinedOffset/SortableGridField/tree/2.1.0"
+            },
+            "time": "2022-07-06T17:53:04+00:00"
+        },
+        {
             "name": "webonyx/graphql-php",
             "version": "v14.11.6",
             "source": {
@@ -6538,7 +7178,9 @@
     "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">=7.4"
+    },
     "platform-dev": [],
     "plugin-api-version": "2.3.0"
 }

@@ -12,11 +12,11 @@ toastnz/blocks - output the theme colours as background colours on each block.
 composer require toastnz/subsites-theme
 ```
 
-Add the following to your `mysite.yml` for colour fields to work:
+Add the following to your `mysite.yml` :
 
 ```yaml
-Page:
-  has_subsites: true
+SilverStripe\Subsites\Model\Subsite:
+  has_subsites_colours: true
 ```
 
 

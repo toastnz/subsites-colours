@@ -13,7 +13,6 @@ use SilverStripe\ORM\DataExtension;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Core\Extension;
 use SilverStripe\View\Requirements;
-use Heyday\ColorPalette\Fields\ColorPaletteField;
 
 class PageExtension extends DataExtension
 {
@@ -25,7 +24,7 @@ class PageExtension extends DataExtension
 class PageControllerExtension extends Extension
 {
 
-    public function onAfterInit()
+    public function onBeforeInit()
     {
 
         $themeCssFilePath = Director::baseFolder() . '/app/client/styles/mainsite-frontend.css';
@@ -44,11 +43,9 @@ class PageControllerExtension extends Extension
             $result = Helper::generateCSSFiles($themeCssFilePath);
         }
         if (file_exists($themeCssFilePath)){
-            
             Requirements::customCSS(file_get_contents($themeCssFilePath));
         }
         
-        Requirements::customCSS(file_get_contents('themes/marmalade/dist/styles/critical.css'));
     }
 
 }

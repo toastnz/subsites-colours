@@ -9,6 +9,10 @@ SilverStripe\Admin\LeftAndMain:
 Page:
   extensions:
     - Toast\SubsitesTheme\Extensions\PageExtension
+    
+PageController:
+  extensions:
+    - Toast\SubsitesTheme\Extensions\PageControllerExtension
 
 Toast\Blocks\Block:
   extensions:

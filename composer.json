@@ -23,6 +23,7 @@
       ],
     "license": "BSD-3-Clause",
     "require": {
+        "php": ">=7.4",
         "silverstripe/framework": "^4.0",
         "silverstripe/subsites": "^2.6",
         "silverstripe/admin": "^1.0",

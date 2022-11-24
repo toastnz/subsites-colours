@@ -28,61 +28,59 @@ class LeftAndMainExtension extends \SilverStripe\Admin\LeftAndMainExtension
         $colours = null;
 
         if(Helper::isSubsite()){
+
+            // TODO: Add an extension so that Subsite::currentSubsite() returns the theme even if we are on the main site
             $subsite = Subsite::currentSubsite();
-            $editorCSSFileName = 'subsite' . $subsite->ID . '-editor.css';
-            $subsiteCSSFileName = 'subsite' . $subsite->ID . '-frontend.css';
-            $colours = $subsite->ThemeColours();
-            
-        }else{
-            $editorCSSFileName = 'mainsite-editor.css';
-            $subsiteCSSFileName = 'mainsite-frontend.css';
-        }
+            $subsiteName = ($subsite) ? $subsite->Title : 'marmalade';
 
+            // Load in the site's cms styles
+            Requirements::customCSS(file_get_contents('themes/'. $subsiteName .'/dist/styles/cms.css'));
+            Requirements::javascript('themes/'. $subsiteName .'/dist/scripts/cms.js');
 
-        $themeCssFilePath = '/app/client/styles/'.$subsiteCSSFileName;
-            $editorCssFilePath = '/app/client/styles/'.$editorCSSFileName;
-            if (!file_exists(Director::baseFolder() .$themeCssFilePath)){
-                $result = Helper::generateCSSFiles($themeCssFilePath);
+            $config = Config::inst()->get(Subsite::class, 'has_subsites_colours');
+            if ( !$config ){
+                // Set TinyMCE with generated css file
+                $config = TinyMCEConfig::get('cms');
+                
+                $themeCssFilePath = '/app/client/styles/mainsite-frontend.css';
+                $editorColoursCssFilePath = '/app/client/styles/mainsite-editor.css';
+                $fontCssFile = '/app/client/styles/mainsite-font.css';
+                $editorCssFilePage = '/themes/marmalade/dist/styles/editor.css';
+
+                 // Generate css files if it doesn't exist
+                 if (!file_exists(Director::baseFolder() .$themeCssFilePath)){
+                    $result = Helper::generateCSSFiles($themeCssFilePath);
+                }
+                if (!file_exists(Director::baseFolder() .$fontCssFile)){
+                    $result = Helper::generateFontCSSFiles();
+                }
+
+                if (file_exists(Director::baseFolder() .$editorCssFilePage) && 
+                file_exists(Director::baseFolder() .$editorColoursCssFilePath) &&
+                file_exists(Director::baseFolder() .$fontCssFile)){
+                    $config->setContentCSS([
+                        $editorCssFilePage,
+                        $editorColoursCssFilePath,
+                        $fontCssFile
+                    ]);
+                }
+                
+                if (file_exists(Director::baseFolder() .$themeCssFilePath)) {
+                    Requirements::customCSS(file_get_contents(Director::baseFolder() .$themeCssFilePath));
+                }
+
+                // get colours from config
+                $siteConfig = SiteConfig::current_site_config();
+                if ($colours = $siteConfig->ThemeColours()){
+                    $themeFormats = $this->getFormatsForTinyMCE($colours);
+                    $formats = $themeFormats;
+                    $config->setOptions([
+                        'importcss_append' => true,
+                        'style_formats' => $formats,
+                    ]);
+                }
             }
-            if (file_exists(Director::baseFolder() .$themeCssFilePath) && file_exists(Director::baseFolder() .$editorCssFilePath)) {
-                $config->setContentCSS([
-                    // $themeCssFilePath,
-                    $editorCssFilePath
-                ]);
-                Requirements::customCSS(file_get_contents(Director::baseFolder() .$themeCssFilePath));
-            }
-            $themeFormats = $this->getFormatsForTinyMCE($colours);
-            $formats = [
-                        [
-                            'title' => 'Colours',
-                            'items' => $themeFormats,
-                        ]
-                    ];
-            $config->setOptions([
-                'importcss_append' => true,
-                'style_formats' => $formats,
-            ]);
-    }
-
-    public function getFormatsForTinyMCE($colours = null)
-    {
-        $formats = [];
-        if (!$colours)
-        {
-            return ;
+        
         }
-
-        // get current subsite colours
-        foreach ($colours as $colour) {
-            $formats[] = [
-                'title'          => $colour->Title,
-                'inline'         => 'span',
-                'classes'        => 'colour--' . strtolower(str_replace(" ","-",$colour->Title)),
-                'wrapper'        => true,
-                'merge_siblings' => true
-            ];
-        }
-
-        return $formats;
     }
 }
